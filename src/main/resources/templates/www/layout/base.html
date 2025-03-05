@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+      xmlns:layout="http://wwww.ultraq.net.nz/thymeleaf/layout" 
+      lang="es">>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link th:href="@{/webjars/materializecss/css/materialize.min.css}" rel="stylesheet">
+</head>
+<body>
+    <header th:replace="www/layout/components/header :: headerbase"> 
+        <h1>Header base</h1>
+        
+    </header>
+    <main> 
+        <div layout:fragment="MainBase">
+            <h1>Main Base</h1>
+        </div>
+      
+     
+    </main>
+    <footer th:replace="www/layout/components/footer :: footerbase">
+        <h1>Main Base</h1>
+        
+    </footer>
+        <script src="/webjars/jquery/jquery.min.js"></script>
+        <script src="/webjars/materializecss/js/materialize.min.js"></script>
+</body>
+</html>
