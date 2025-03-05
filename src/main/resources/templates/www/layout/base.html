@@ -1,31 +1,36 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" 
-      xmlns:layout="http://wwww.ultraq.net.nz/thymeleaf/layout" 
-      lang="es">>
-    
+<!-- xmlns:layout: que la plantilla puede ser heredada -->
+<html 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:layout="http://wwww.ultraq.net.nz/thymeleaf/layout" 
+    lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
+    <title>Jardineria Garden</title>
     <link th:href="@{/webjars/materializecss/css/materialize.min.css}" rel="stylesheet">
+  
 </head>
 <body>
-    <header th:replace="www/layout/components/header :: headerbase"> 
-        <h1>Header base</h1>
-        
+    <header th:replace="~{/www/layout/components/header :: headerBase}">
+        <h1>header base</h1>
     </header>
-    <main> 
+    <main>
+        <!-- index, contacto, servicios, productos ... 
+            va a redefinir fragment mainBase -->
         <div layout:fragment="MainBase">
-            <h1>Main Base</h1>
+            <h1>Main baseee</h1>
         </div>
-      
-     
+
     </main>
-    <footer th:replace="www/layout/components/footer :: footerbase">
-        <h1>Main Base</h1>
-        
+    <footer 
+        th:replace="~{www/layout/components/footer :: footerbase}">
+        <h1>Footer Base</h1>
     </footer>
-        <script src="/webjars/jquery/jquery.min.js"></script>
-        <script src="/webjars/materializecss/js/materialize.min.js"></script>
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/materializecss/js/materialize.min.js}"></script>
+
+
 </body>
 </html>
