@@ -1,0 +1,8 @@
+.tabla-compacta {
+    font-size: 0.85rem;
+}
+
+.tabla-compacta th,
+.tabla-compacta td {
+    padding: 4px;
+}

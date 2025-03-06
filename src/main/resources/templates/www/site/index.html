@@ -1,12 +1,86 @@
-<!-- index es DECORADA por la plantilla base.html-->
-
 <html xmlns:th="http://www.thymeleaf.org"
-      layout:decorate="~{/www/layout/base}"
->
+      layout:decorate="~{/www/layout/base}">
 
 <div layout:fragment="MainBase">
-       <!-- Contenido principal -->
+    <main class="container-fluid py-4">
+        <div class="row g-3 justify-content-center">
+            <!-- Columna Izquierda - Perfil (sin fondo) -->
+            <aside class="col-8 col-md-3">
+                <div class="p-3 rounded shadow-sm h-100">
+                    <div class="text-center mb-3">
+                        <img th:src="@{/img/2BF41C0F-3A4C-4F86-9858-66ED4BBDA1A2.JPG}" 
+                             alt="Foto perfil"
+                             class="img-fluid rounded shadow"
+                             style="max-width: 120px;">
+                    </div>
 
+                    <table class="table table-bordered tabla-compacta">
+                        <thead class="table-dark">
+                            <tr><th>Idioma</th><th>Estado</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Inglés</td><td>En proceso</td></tr>
+                            <tr><td>Francés</td><td>Cosas mínimas</td></tr>
+                            <tr><td>Alemán</td><td>null</td></tr>
+                            <tr><td>Chino</td><td>null</td></tr>
+                        </tbody>
+                    </table>
 
-    
+                    <h2 class="h6 mt-3 border-bottom pb-1">Aptitudes</h2>
+                    <ul class="list-unstyled small">
+                        <li>Trabajo en equipo</li>
+                        <li>Iniciativa</li>
+                        <li>Aprendizaje fluido</li>
+                        <li>Buena comunicación</li>
+                    </ul>
+
+                    <h2 class="h6 mt-3 border-bottom pb-1">Habilidades</h2>
+                    <ul class="list-unstyled small">
+                        <li>HTML y CSS (Básico-Medio)</li>
+                        <li>Java Básico</li>
+                        <li>Instalación de redes</li>
+                        <li>Bases de datos (Básico)</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Columna Derecha - Info Principal -->
+            <section class="col-md-9">
+                <div class="bg-light p-3 rounded shadow-sm h-100">
+                    <h2 class="fw-bold">Sergio Gallardo Grima</h2>
+
+                    <article class="mt-3">
+                        <h3 class="h5 fw-bold">Resumen profesional</h3>
+                        <p>Meses trabajando como tecnico de redes de fibra, siempre me ha gustado el tema de los ordenadores a nivel fisico, estoy al dia de los
+                           ultimos componentes que salen al mercado, he montado mi propio ordenador y el de algunas amistades</p>
+                    </article>
+
+                    <article class="mt-3">
+                        <h3 class="h5 fw-bold">Historial laboral</h3>
+                        <p>
+                            Abril 2024 - Junio 2024<br>
+                            Prácticas en Acaciophone: instalación de fibra, antena y configuración/redes.
+                        </p>
+                    </article>
+
+                    <article class="mt-3">
+                        <h3 class="h5 fw-bold">Formación</h3>
+                        <p>
+                            2024<br>
+                            Grado Medio en Sistemas Microinformáticos y Redes<br>
+                            IES Cura Valera, Huércal-Overa
+                        </p>
+                        <p>
+                            2025<br>
+                            Acabando el primer año de Grado Superior en Desarrollo de Aplicaciones Multiplataforma
+                            para poder conseguir un buen trabajo, fijo y estable para poder establecerme un buen futuro<br>  
+                        </p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
 </div>
+
+</html>       
+

@@ -1,4 +1,24 @@
-<!-- Es un componente complejo -->
 <header th:fragment="headerBase">
-    <p>Tecnico en sistemas microinformatico y redes</p>
+    <nav class="navbar custom-navbar navbar-expand-lg" style="background-color: #2d3236;">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" style="white-space: normal;" href="#">
+                Técnico en sistemas microinformáticos y redes
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="/formulario">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>
