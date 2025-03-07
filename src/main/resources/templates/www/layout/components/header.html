@@ -1,7 +1,7 @@
 <header th:fragment="headerBase">
     <nav class="navbar custom-navbar navbar-expand-lg" style="background-color: #2d3236;">
         <div class="container-fluid">
-            <a class="navbar-brand text-white" style="white-space: normal;" href="#">
+            <a class="navbar-brand text-white" style="white-space: normal;" href="/">
                 Técnico en sistemas microinformáticos y redes
             </a>
             
@@ -15,7 +15,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-lg-auto">
                     <li class="nav-item">
+                        <a class="nav-link text-white" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-white" aria-current="page" href="/formulario">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/pdf/CV.pdf" download>Descargar CV</a>
                     </li>
                 </ul>
             </div>
