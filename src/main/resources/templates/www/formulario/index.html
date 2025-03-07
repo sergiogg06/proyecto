@@ -1,58 +1,71 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario</title>
- 
-</head>
-<body>
-  <header> 
-    <p>Tecnico en sistemas microinformatico y redes</p>
-    
-</header>
-<main>
-  <form action="/submit" method="post" class="form-container">
-    <h2>Contacto</h2>
-    <div class="form-content">
-      <div class="izquierda">
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" required>
+<html xmlns:th="http://www.thymeleaf.org"
+layout:decorate="~{/www/layout/base}">
+<div layout:fragment="MainBase">
+  <main class="container py-4">
+    <div class="row g-4">
 
-        <label for="gmail">Gmail:</label>
-        <input type="email" id="gmail" name="gmail" placeholder="Ingrese su correo de Gmail" pattern="[a-z0-9._%+-]+@gmail\.com" required>
+        <!-- Tarjeta del formulario -->
+        <div class="col-md-6">
+            <div class="bg-light p-4 rounded shadow-sm h-100">
+                <h2 class="mb-4 fw-bold">Contacto</h2>
 
-        <label for="especialidad">Especialidad:</label>
-        <select id="especialidad" name="especialidad" required>
-          <option value="" disabled selected>Seleccione una opción</option>
-          <option value="desarrollo-web">Desarrollo Web</option>
-          <option value="ciberseguridad">Ciberseguridad</option>
-          <option value="soporte-tecnico">Soporte Técnico</option>
-          <option value="inteligencia-artificial">Inteligencia Artificial</option>
-          <option value="redes">Redes</option>
-        </select>
-      </div>
+                <form action="/submit" method="post">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="telefono" class="form-label fw-bold">Teléfono:</label>
+                            <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="instagram" class="form-label fw-bold">Instagram:</label>
+                            <input type="text" class="form-control" id="instagram" name="instagram" placeholder="Ingrese su usuario de Instagram">
+                        </div>
 
-      <div class="derecha">
-        <label for="instagram">Instagram:</label>
-        <input type="text" id="instagram" name="instagram" placeholder="Ingrese su usuario de Instagram">
+                        <div class="col-md-6">
+                            <label for="gmail" class="form-label fw-bold">Gmail:</label>
+                            <input type="email" class="form-control" id="gmail" name="gmail" placeholder="Ingrese su correo de Gmail" pattern="[a-z0-9._%+-]+@gmail\\.com" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="twitter" class="form-label fw-bold">Twitter:</label>
+                            <input type="text" class="form-control" id="twitter" name="twitter" placeholder="Ingrese su usuario de Twitter">
+                        </div>
 
-        <label for="twitter">Twitter:</label>
-        <input type="text" id="twitter" name="twitter" placeholder="Ingrese su usuario de Twitter">
+                        <div class="col-md-6">
+                            <label for="especialidad" class="form-label fw-bold">Especialidad:</label>
+                            <select class="form-select" id="especialidad" name="especialidad" required>
+                                <option value="" disabled selected>Seleccione una opción</option>
+                                <option value="desarrollo-web">Desarrollo Web</option>
+                                <option value="ciberseguridad">Ciberseguridad</option>
+                                <option value="soporte-tecnico">Soporte Técnico</option>
+                                <option value="inteligencia-artificial">Inteligencia Artificial</option>
+                                <option value="redes">Redes</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="skype" class="form-label fw-bold">Skype:</label>
+                            <input type="text" class="form-control" id="skype" name="skype" placeholder="Ingrese su usuario de Skype">
+                        </div>
+                    </div>
 
-        <label for="skype">Skype:</label>
-        <input type="text" id="skype" name="skype" placeholder="Ingrese su usuario de Skype">
-      </div>
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-dark w-100">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Tarjeta del mapa -->
+        <div class="col-md-6">
+            <div class="bg-light p-4 rounded shadow-sm h-100">
+                <h2 class="mb-4 fw-bold">Ubicación</h2>
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1807.7939901623633!2d-1.8238370807795352!3d37.173789481198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1739474972656!5m2!1ses!2ses"
+                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <button type="submit">Enviar</button>
-  </form>
-  <div class="mapa-container">
-    <h2>Ubicación</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1807.7939901623633!2d-1.8238370807795352!3d37.173789481198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1739474972656!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
 </main>
-<footer>
-  <a href="/">Home</a>
-</footer>
-</body>
+</div>
 </html>
