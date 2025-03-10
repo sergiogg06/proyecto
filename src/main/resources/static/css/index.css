@@ -6,3 +6,38 @@
 .tabla-compacta td {
     padding: 4px;
 }
+#carruselFormacion {
+    max-width: 400px; /* Define un tamaño cuadrado */
+    max-height: 400px;
+    margin: auto; /* Centrar el carrusel */
+    overflow: hidden; /* Evita que las imágenes sobresalgan */
+    border-radius: 10px; /* Bordes redondeados opcionales */
+}
+
+#carruselFormacion img {
+    width: 100%; /* Ajusta el ancho de la imagen */
+    height: 100%; /* Hace que todas las imágenes tengan la misma altura */
+    object-fit: cover; /* Ajusta las imágenes sin distorsionarlas */
+}
+.contenedor-tecnologias {
+    max-width: 450px; /* Aumenta el ancho */
+    padding: 20px; /* Más espacio interno */
+    background-color: #fbf5f5; /* Gris equilibrado */
+    border: 1px solid #a0a0a0; /* Borde fino */
+    border-radius: 10px; /* Bordes más suaves */
+    text-align: center; /* Centra el contenido */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Sombra más marcada */
+}
+
+/* Ajustar el carrusel dentro del recuadro */
+#carruselFormacion img {
+    max-height: 350px; /* Hace las imágenes más grandes */
+    object-fit: cover; /* Ajusta las imágenes sin distorsionarlas */
+}
+
+#carruselFormacion img {
+    max-height: 300px; /* Mantiene el tamaño controlado */
+    object-fit: cover;
+}
+
+
