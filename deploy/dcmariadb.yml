@@ -1,0 +1,14 @@
+version: '3'
+services:
+  db:
+    image: mariadb
+    container_name: bdportafolio
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: portafolioDB
+      MYSQL_USER: portafolio
+      MYSQL_PASSWORD: pswportafolio
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - "3310:3306"
