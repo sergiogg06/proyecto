@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Inicializar AOS (Animate On Scroll)
     AOS.init({
-        duration: 1000,   // Duración de las animaciones (en ms)
-        once: true,        // Solo animar una vez al hacer scroll
-        easing: 'ease-in-out', // Efecto de aceleración
+        duration: 1000,
+        once: true,
+        easing: 'ease-in-out',
     });
 
     console.log('AOS inicializado correctamente');
@@ -32,4 +32,43 @@ document.addEventListener('DOMContentLoaded', function() {
             imagenPerfil.style.transform = "scale(1)";
         });
     }
+
+    // Efecto en iconos del footer
+    const redesFooter = document.querySelectorAll("footer .fab");
+    redesFooter.forEach(icono => {
+        icono.style.transition = "transform 0.3s ease, color 0.3s ease";
+        
+        icono.addEventListener("mouseover", function () {
+            icono.style.transform = "scale(1.2)";
+            icono.style.color = "#ffcc00";
+        });
+
+        icono.addEventListener("mouseout", function () {
+            icono.style.transform = "scale(1)";
+            icono.style.color = "white";
+        });
+    });
+
+    // Efecto de escritura en el encabezado
+    function efectoEscritura() {
+        const tituloElemento = document.getElementById("tituloEscritura");
+        if (!tituloElemento) return;
+
+        const textoTitulo = tituloElemento.textContent.trim();
+        tituloElemento.textContent = "";
+        let index = 0;
+
+        function escribirTitulo() {
+            if (index < textoTitulo.length) {
+                tituloElemento.textContent += textoTitulo.charAt(index);
+                index++;
+                setTimeout(escribirTitulo, 100); // Velocidad de escritura
+            }
+        }
+
+        escribirTitulo();
+    }
+
+    // Iniciar el efecto de escritura
+    efectoEscritura();
 });
