@@ -15,6 +15,7 @@ public class formularioService {
     formularioRepository fR;
   
     public void guardar(formulario formulario) {
+        System.out.println(formulario);
         fR.save(formulario);
     }
 }
