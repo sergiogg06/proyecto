@@ -6,37 +6,29 @@ import jakarta.persistence.*;
 @Table(name = "contactos")
 public class formulario {
     
-     @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Esto permite que se genere automáticamente un ID único
     private Long id;
 
-    @Column(name = "gmail", unique = true, nullable = false)
+   
     private String gmail;
 
-    @Column(name = "telefono")
+   
     private String telefono;
 
-    @Column(name = "instagram")
+    
     private String instagram;
 
-    @Column(name = "twitter")
+   
     private String twitter;
 
-    @Column(name = "especialidad")
+   
     private String especialidad;
 
-    @Column(name = "skype")
+    
     private String skype;
 
-    formulario(Long id, String gmail, String telefono, String instagram, String twitter, String especialidad, String skype) {
-        this.setId(id);
-        this.setGmail(gmail);
-        this.setTelefono(telefono);
-        this.setInstagram(instagram);
-        this.setTwitter(twitter);
-        this.setEspecialidad(especialidad);
-        this.setSkype(skype);
-    }   
+
     
     // Getters y Setters aquí...
     public Long getId() {

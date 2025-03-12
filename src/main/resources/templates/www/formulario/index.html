@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" layout:decorate="~{/www/layout/base}">
+<html xmlns:th="http://www.thymeleaf.org"
+layout:decorate="~{/www/layout/base}">
 <div layout:fragment="MainBase">
   <main class="container py-4">
     <div class="row g-4">
@@ -9,7 +10,7 @@
             <div class="bg-light p-4 rounded shadow-sm h-100">
                 <h2 class="mb-4 fw-bold">Contacto</h2>
 
-                <form id="formulario">
+                <form action="/submit" method="post">
                     <div class="row g-3">
                         <div class="col-md-6">
                             <label for="telefono" class="form-label fw-bold">Teléfono:</label>
@@ -63,40 +64,8 @@
                 </div>
             </div>
         </div>
+
     </div>
 </main>
 </div>
-
-<script>
-    document.getElementById("formulario").addEventListener("submit", function(event) {
-        event.preventDefault();
-    
-        const formData = {
-            telefono: document.getElementById("telefono").value.trim(),
-            gmail: document.getElementById("gmail").value.trim(),
-            especialidad: document.getElementById("especialidad").value.trim(),
-            instagram: document.getElementById("instagram").value.trim(),
-            twitter: document.getElementById("twitter").value.trim(),
-            skype: document.getElementById("skype").value.trim()
-        };
-    
-        fetch("http://localhost:8080/api/formulario/guardar", {
-            method: "POST",
-            headers: { 
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert("Formulario guardado con éxito");
-            console.log("Respuesta del servidor:", data);
-        })
-        .catch(error => console.error("Error en fetch():", error));
-    });
-    </script>
-    
-    
-    
 </html>

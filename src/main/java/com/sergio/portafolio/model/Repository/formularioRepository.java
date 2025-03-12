@@ -6,5 +6,6 @@ import com.sergio.portafolio.model.Entity.formulario;
 
 @Repository
 public interface formularioRepository extends JpaRepository<formulario, Long> {
+    
 }
 
