@@ -23,12 +23,21 @@ public class formularioService {
         this.fR.save(formulario);
     }
 
-    public void delete(String gmail) {
-        this.fR.deleteById(gmail);
+    public void delete(Long id) {
+        this.fR.deleteById(id);
     }
 
-    public formulario getEmail(String gmail) {
-        formulario formulario = this.fR.findById(gmail).get();
+    public formulario getEmail(Long id) {
+        formulario formulario = this.fR.findById(id).get();
         return formulario;
+    }
+  
+    public formulario guardarFormulario(formulario formulario) {
+        try {
+            return fR.save(formulario);
+        } catch (Exception e) {
+            System.err.println("Error al guardar el formulario: " + e.getMessage());
+            return null;
+        }
     }
 }

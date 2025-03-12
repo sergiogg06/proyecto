@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import com.sergio.portafolio.model.Entity.formulario;
 
 @Repository
-public interface formularioRepository extends JpaRepository<formulario, String> {
+public interface formularioRepository extends JpaRepository<formulario, Long> {
 }
 
